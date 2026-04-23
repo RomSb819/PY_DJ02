@@ -10,7 +10,7 @@
 
     <title>
         {% block title %}
-        <Берегите природу>
+        Экология начинается с нас
         {% endblock %}
     </title>
 
@@ -27,35 +27,14 @@
     <div class="container-fluid">
         <div class="row min-vh-100">
 
-            <!-- Боковое меню -->
-            <aside class="col-12 col-md-3 col-lg-2 bg-dark text-white p-4 shadow">
-                <div class="text-center mb-4">
-                    <img src="{% static 'main/img/forest.png' %}" alt="лес" class="img-fluid rounded mb-3" style="max-width: 120px;">
-                    <h3 class="fw-bold">Берегите природу</h3>
-                    <p class="text-secondary small mb-0">Учебный проект</p>
-                </div>
-
-                <nav>
-                    <ul class="nav flex-column gap-2">
-                        <li class="nav-item">
-                            <a href="{% url 'home' %}" class="nav-link text-white rounded px-3 py-2 menu-link">
-                                <i class="bi bi-house-door-fill me-2"></i>Главная
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'page2' %}" class="nav-link text-white rounded px-3 py-2 menu-link">
-                                <i class="bi bi-grid-fill me-2"></i>Второстепенная
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
+            {% include 'main/menu.html' %}
 
             <!-- Основной контент -->
             <main class="col-12 col-md-9 col-lg-10 p-4">
                 <div class="bg-white rounded-4 shadow-sm p-4 h-100">
                     {% block content %}
                     {% endblock %}
+                    {% include 'main/footer.html' %}
                 </div>
             </main>
 
