@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+aside {
+    min-height: 100vh;
+}
+
+.menu-link {
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+    background-color: #198754;
+    color: #fff !important;
+    transform: translateX(4px);
+}
+
+main {
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+}
